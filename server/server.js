@@ -69,6 +69,5 @@ app.get("/api/currency", async (req, res) => {
 });
 
 // ----- START SERVER -----
-app.listen(PORT, () => {
-  console.log(`✅ Server is running on http://localhost:${PORT}`);
-});
+// ✅ Export the Express app for Vercel
+module.exports = app;
