@@ -69,5 +69,10 @@ app.get("/api/currency", async (req, res) => {
 });
 
 // ----- START SERVER -----
+
+app.listen(process.env.PORT || 5000, () => {
+  console.log("✅ Server running on port 5000");
+});
+
 // ✅ Export the Express app for Vercel
 module.exports = app;
