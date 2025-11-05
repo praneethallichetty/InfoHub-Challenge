@@ -43,7 +43,6 @@
 
 // export default WeatherModule;
 
-
 import React, { useState } from "react";
 import axios from "axios";
 
@@ -76,4 +75,15 @@ function WeatherModule() {
       />
       <button onClick={fetchWeather}>Get Weather</button>
 
-      {error && <p classNam
+      {error && <p className="error">{error}</p>}
+
+      {weather && !weather.error && (
+        <p className="result">
+          {weather.city}: {weather.temperature}°C, {weather.condition}
+        </p>
+      )}
+    </div>
+  );
+}
+
+export default WeatherModule;
